@@ -1,2 +1,2 @@
-# blog-backup
-backup my gitpage,just for self-use
+# nanshihui.github.io
+to record everyday of my life

@@ -1,0 +1,180 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <%if(post.noDate != "true"){%>
+    <div class="article-meta">
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    </div>
+  <%}%>
+  <div class="article-inner">
+
+    <% if (theme.fancybox){ %>
+      <input type="hidden" class="isFancy" />
+    <% } %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+      </header>
+      <% if (!index){ %>
+      <div class="article-info article-info-post">
+        <%- partial('post/category') %>
+        <%- partial('post/tag') %>
+        <div class="clearfix"></div>
+      </div>
+      <% } %>
+    <% } %>
+    <div class="article-entry" itemprop="articleBody">
+      <% if (index && (post.description || post.excerpt)){ %>
+          <% if (post.description){ %>
+              <%- post.description %>
+          <% } else { %>
+              <%- post.excerpt %>
+          <% } %>
+      <% } else { %>
+          <% if (is_page()){ %>
+              <%- partial('_partial/page') %>
+          <% } %>
+  <% if (page.path === "tags/index.html"){ %>
+    <hr>
+    <br>
+    <%- list_categories({
+        depth: 1,
+    }) %>
+    <div class="tags">
+        <%- tagcloud({
+            min_font: 16, 
+            max_font: 35, 
+            amount: 999, 
+            color: true, 
+            start_color: 'gray', 
+            end_color: 'black',
+        }) %>
+    </div>
+    <style>
+        .category-list li{
+            display: inline-block;
+            margin: 0 1em .5em 0;
+            padding: 4px;
+            border: 1px solid lightgray;
+            font-size: 1.2em;
+        }
+        .category-list a {
+            color: gray;
+        }
+        .category-list-item:hover a {
+            color: gray;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .category-list-count {
+            margin-left: 2px;
+            font-size: .9em;
+        }
+        .article-entry ul li:before{
+            display: none;
+        }
+        .article-inner  {
+            text-align: center;
+        }
+        .tags {
+            max-width: 40em;
+            margin: 2em auto;
+            margin-top: 0em;
+        }
+        .tags a {
+            margin-right: 1em;
+            border-bottom: 1px solid gray;
+            line-height: 65px;
+            white-space: nowrap;
+        }
+        .tags a:hover {
+            border-bottom: 2px solid black;
+            font-style: italic;
+            text-decoration: none;
+        }
+    </style>
+<% } %>
+        <%- post.content %>
+      <% } %>
+    </div>
+    <% if (index){ %>
+    <div class="article-info article-info-index">
+      <%if(post.top){%>
+        <div class="article-pop-out tagcloud">
+          <a class="">置顶</a>
+        </div>
+      <% } %>
+      <%- partial('post/category') %>
+      <%- partial('post/tag') %>
+      <% if (index && (post.description || post.excerpt)){ %>
+        <p class="article-more-link">
+          <a <% if (!theme.excerpt_link){ %>class="hidden"<% } %> href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
+        </p>
+      <% } %>
+      <div class="clearfix"></div>
+    </div>
+    <% } %>
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
+<% if (!index && post.toc != false && !is_page()){ %>
+    <%- partial('_partial/toc') %>
+<% } %>
+<% if (!index && theme.share){ %>
+<%- partial('post/share') %>
+<% } %>
+
+<% if (!index && post.comments){ %>
+    <% if (theme.duoshuo.on) { %>
+      <%- partial('comments/duoshuo', {
+          key: post.path,
+          title: post.title,
+          url: config.url+url_for(post.path),
+          }) %>
+    <% } else if (theme.youyan.on) { %>
+        <%- partial('comments/youyan') %>
+    <% } else if (theme.disqus.on) { %>
+        <%- partial('comments/disqus', {
+            shortname: theme.disqus.shortname
+          }) %>
+    <% } else if (config.disqus_shortname) { %>
+        <%- partial('comments/disqus', {
+            shortname: config.disqus_shortname
+          }) %>
+    <% } %>
+<% } %>
+
+<%- partial('_partial/post-nav-button') %>
+
+<% if (post.fancybox != false){ %>
+    <% if (theme.fancybox){ %>
+        <%- css('fancybox/jquery.fancybox') %>
+        <script>
+            var yiliaConfig = {
+            fancybox: <%=theme.fancybox%>,
+            mathjax: <%=theme.mathjax%>,
+            animate: <%=theme.animate%>,
+            isHome: <%=is_home()%>,
+            isPost: <%=is_post()%>,
+            isArchive: <%=is_archive()%>,
+            isTag: <%=is_tag()%>,
+            isCategory: <%=is_category()%>,
+            open_in_new: <%=theme.open_in_new%>
+            }
+        </script>
+    <% } %>    
+<% } else { %>
+        <script>
+            var yiliaConfig = {
+            fancybox: false,
+            mathjax: <%=theme.mathjax%>,
+            animate: <%=theme.animate%>,
+            isHome: <%=is_home()%>,
+            isPost: <%=is_post()%>,
+            isArchive: <%=is_archive()%>,
+            isTag: <%=is_tag()%>,
+            isCategory: <%=is_category()%>,
+            open_in_new: <%=theme.open_in_new%>
+            }
+        </script>
+<% } %>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Scan-T简介 | Sherwel-Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言看着自己编写的代码没有说明的确不方便别人开发，便写了部分说明在这边。简单的记录该项目的相关说明。
+关于Scan-T项目的说明
+文件分布:详细文件分类
+功能使用:大致的功能描述
+效果展示: 初步的界面效果
+TODO: 进一步需要做的事情
+其他: 补充的地方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scan-T简介">
+<meta property="og:url" content="http://nanshihui.github.io/2016/01/21/ToolForSpider简介/index.html">
+<meta property="og:site_name" content="Sherwel-Blog">
+<meta property="og:description" content="前言看着自己编写的代码没有说明的确不方便别人开发，便写了部分说明在这边。简单的记录该项目的相关说明。
+关于Scan-T项目的说明
+文件分布:详细文件分类
+功能使用:大致的功能描述
+效果展示: 初步的界面效果
+TODO: 进一步需要做的事情
+其他: 补充的地方">
+<meta property="og:image" content="http://nanshihui.github.io/public/main.png">
+<meta property="og:image" content="http://nanshihui.github.io/public/result.png">
+<meta property="og:image" content="http://nanshihui.github.io/public/work.png">
+<meta property="og:image" content="http://nanshihui.github.io/public/analyse.png">
+<meta property="og:image" content="http://nanshihui.github.io/public/mapshow.png">
+<meta property="og:updated_time" content="2016-09-07T05:12:07.725Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Scan-T简介">
+<meta name="twitter:description" content="前言看着自己编写的代码没有说明的确不方便别人开发，便写了部分说明在这边。简单的记录该项目的相关说明。
+关于Scan-T项目的说明
+文件分布:详细文件分类
+功能使用:大致的功能描述
+效果展示: 初步的界面效果
+TODO: 进一步需要做的事情
+其他: 补充的地方">
+  
+    <link rel="alternative" href="/atom.xml" title="Sherwel-Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">Sherwel</a></h1>
+        </hgroup>
+
+        
+        
+        <form><input type="text" class="search" placeholder=" Search..."></form>
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                            <li><a href="/sitemap.xml">Sitemap</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="mailto:nanshihui@gmail.com" title="Email"></a></li>
+                            
+                                <li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/sherwel" title="新浪微博"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/nanshihui" title="GitHub"></a></li>
+                            
+                                <li id="知乎"><a class="知乎" target="_blank" href="https://www.zhihu.com/people/sherwel" title="知乎"></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CCS/" style="font-size: 13.33px;">CCS</a> <a href="/tags/Centos/" style="font-size: 10px;">Centos</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Nmap/" style="font-size: 13.33px;">Nmap</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/S-P/" style="font-size: 10px;">S&P</a> <a href="/tags/SQL注入/" style="font-size: 10px;">SQL注入</a> <a href="/tags/Software/" style="font-size: 10px;">Software</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/Zmap/" style="font-size: 16.67px;">Zmap</a> <a href="/tags/import/" style="font-size: 10px;">import</a> <a href="/tags/sqlmap/" style="font-size: 10px;">sqlmap</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/爬虫/" style="font-size: 13.33px;">爬虫</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/nanshihui">GitHub</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于吃</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Sherwel</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img lazy-src="/img/avatar.png" class="js-avatar">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Sherwel</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="mailto:nanshihui@gmail.com" title="Email"></a></li>
+                            
+                                <li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/sherwel" title="新浪微博"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/nanshihui" title="GitHub"></a></li>
+                            
+                                <li id="知乎"><a class="知乎" target="_blank" href="https://www.zhihu.com/people/sherwel" title="知乎"></a></li>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-ToolForSpider简介" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/21/ToolForSpider简介/" class="article-date">
+      <time datetime="2016-01-21T01:25:37.000Z" itemprop="datePublished">2016-01-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Scan-T简介
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Web安全/">Web安全</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nmap/">Nmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Zmap/">Zmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/爬虫/">爬虫</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p></p><h2 id="intro">前言</h2>看着自己编写的代码没有说明的确不方便别人开发，便写了部分说明在这边。简单的记录该项目的相关说明。<p></p>
+<h3 id="u5173_u4E8EScan-T_u9879_u76EE_u7684_u8BF4_u660E"><a href="#u5173_u4E8EScan-T_u9879_u76EE_u7684_u8BF4_u660E" class="headerlink" title="关于Scan-T项目的说明"></a>关于Scan-T项目的说明</h3><ul>
+<li><strong>文件分布:</strong>详细文件分类</li>
+<li><strong>功能使用:</strong>大致的功能描述</li>
+<li><strong>效果展示:</strong> 初步的界面效果</li>
+<li><strong>TODO:</strong> 进一步需要做的事情</li>
+<li><strong>其他:</strong> 补充的地方<a id="more"></a>
+</li>
+</ul>
+<h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>　　Scan-T是一个网络空间指纹扫描工具，用于记录主机上的端口信息。以分布的方式，方便数据的抓取以及呈现，未来将会添加统计以及总结这些数据潜在的意义（暂时思路比较模糊）。有愿意指点我的，可以提供一点思路，谢谢。</p>
+<h2 id="u6574_u4F53_u67B6_u6784"><a href="#u6574_u4F53_u67B6_u6784" class="headerlink" title="整体架构"></a>整体架构</h2><p>　　Scan-T的整体架构为nginx+Django+uwsgi,主体语言为python,抓取信息时,使用线程,进程,协程相互配合方式,检索数据使用ES配合redis,提高检索效率.</p>
+<h3 id="u9879_u76EE_u5730_u5740"><a href="#u9879_u76EE_u5730_u5740" class="headerlink" title="项目地址"></a>项目地址</h3><p>　　<a href="https://github.com/nanshihui/Scan-T" target="_blank" rel="external">https://github.com/nanshihui/Scan-T</a></p>
+<h2 id="u6548_u679C_u5C55_u793A"><a href="#u6548_u679C_u5C55_u793A" class="headerlink" title="效果展示"></a>效果展示</h2><h3 id="u9996_u9875"><a href="#u9996_u9875" class="headerlink" title="首页"></a>首页</h3><p><img src="http://nanshihui.github.io/public/main.png" alt="PS-PNG-main"></p>
+<h3 id="u68C0_u7D22_u7ED3_u679C"><a href="#u68C0_u7D22_u7ED3_u679C" class="headerlink" title="检索结果"></a>检索结果</h3><p><img src="http://nanshihui.github.io/public/result.png" alt="PS-PNG-result"></p>
+<h3 id="u540E_u53F0"><a href="#u540E_u53F0" class="headerlink" title="后台"></a>后台</h3><p><img src="http://nanshihui.github.io/public/work.png" alt="PS-PNG-work"></p>
+<h3 id="u7EDF_u8BA1_u5206_u6790_u9875_u9762"><a href="#u7EDF_u8BA1_u5206_u6790_u9875_u9762" class="headerlink" title="统计分析页面"></a>统计分析页面</h3><p><img src="http://nanshihui.github.io/public/analyse.png" alt="PS-PNG-analyse"></p>
+<h3 id="u4E3B_u673A_u4F4D_u7F6E_u660E_u7EC6_u9875_u9762"><a href="#u4E3B_u673A_u4F4D_u7F6E_u660E_u7EC6_u9875_u9762" class="headerlink" title="主机位置明细页面"></a>主机位置明细页面</h3><p><img src="http://nanshihui.github.io/public/mapshow.png" alt="PS-PNG-analyse"><br><!--### 移动端--><br><!--<div>--><br><!--<img src="http://nanshihui.github.io/public/phone.png" width = "268" height = "480" alt="图片名称" align="center" />--><br><!--</div>--></p>
+<h2 id="u6574_u4F53_u601D_u8DEF"><a href="#u6574_u4F53_u601D_u8DEF" class="headerlink" title="整体思路"></a>整体思路</h2><p>　　整个项目是一个分布式的形式。如果在单台机子上，就是一个WEB项目，如果在多台机上面，就是一个主从的运行模式，由主机从用户的输入以及定时产生的任务产生数据，自己在处理数据的同时，如果从机有响应任务请求。主机会将一部分的任务发送给从机。待从机执行完任务后，将结果反馈给主机。主机再将结果返回给用户以及数据库里。由于所有的消息都是异步的，所以在实现的时候，大部分都是异步，以任务的形式分发，执行。</p>
+<h2 id="u5B89_u88C5_u65B9_u6CD5"><a href="#u5B89_u88C5_u65B9_u6CD5" class="headerlink" title="安装方法"></a>安装方法</h2><h3 id="Prepare_the_environment"><a href="#Prepare_the_environment" class="headerlink" title="Prepare the environment"></a>Prepare the environment</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">apt-get update </span><br><span class="line">apt-get install -y nmap</span><br><span class="line">apt-get install -y libjson-c-dev libjson-c2  libjson0 libjson0-dev</span><br><span class="line">apt-get install -y redis-server zmap libffi-dev libssl-dev python-pip libmysqlclient-dev</span><br><span class="line">apt-get install -y wget unzip</span><br><span class="line">apt-get install mysql-server</span><br></pre></td></tr></table></figure>
+<h3 id="Get_the_code"><a href="#Get_the_code" class="headerlink" title="Get the code"></a>Get the code</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/nanshihui/Scan-T/archive/master.zip</span><br><span class="line">unzip master.zip </span><br><span class="line"><span class="built_in">cd</span> Scan-T-master/</span><br></pre></td></tr></table></figure>
+<h3 id="Install_package"><a href="#Install_package" class="headerlink" title="Install package"></a>Install package</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">pip install MySQL-python</span><br><span class="line">pip install BeautifulSoup==<span class="number">3.2</span>.<span class="number">1</span></span><br><span class="line">pip install beautifulsoup4==<span class="number">4.4</span>.<span class="number">1</span></span><br><span class="line">pip install Django==<span class="number">1.9</span></span><br><span class="line">pip install python-nmap==<span class="number">0.5</span>.<span class="number">0</span>.post1</span><br><span class="line">pip install DBUtils==<span class="number">1.1</span></span><br><span class="line">pip install paramiko==<span class="number">1.16</span>.<span class="number">0</span></span><br><span class="line">pip install ruamel.ordereddict==<span class="number">0.4</span>.<span class="number">9</span></span><br><span class="line">pip install scapy==<span class="number">2.3</span>.<span class="number">2</span></span><br><span class="line">pip install scapy-http==<span class="number">1.7</span></span><br><span class="line">pip install objgraph==<span class="number">2.0</span>.<span class="number">1</span></span><br><span class="line">pip install pycrypto==<span class="number">2.6</span>.<span class="number">1</span></span><br><span class="line">pip install dozer</span><br><span class="line">pip install faulthandler</span><br><span class="line">pip install apscheduler</span><br></pre></td></tr></table></figure>
+<h3 id="Set_the_mysql_config"><a href="#Set_the_mysql_config" class="headerlink" title="Set the mysql config"></a>Set the mysql config</h3><ul>
+<li>create table</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p <span class="operator">-e</span> <span class="string">'create database datap'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>change password</li>
+</ul>
+<p>change you sql password both in spidermanage/spidertool/config.py<br>toolforspider/spidermanage/spidermanage/settings.py</p>
+<ul>
+<li>import the data structure</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p datap <span class="operator">-e</span> <span class="string">'source /toolforspider-master/spidermanage/sqldata/Dump20160331.sql'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>add your username</li>
+</ul>
+<p>add your username and password in usertable</p>
+<h3 id="Add_css_file"><a href="#Add_css_file" class="headerlink" title="Add css file"></a>Add css file</h3><ul>
+<li>PATH:/toolforspider-master/spidermanage/common_static/nmaptool/css/bootstrap/ </li>
+</ul>
+<p>create floder named lib and download css below<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://cine9deabril.com.br/fn/jquery/jquery-ui-<span class="number">1.10</span>.<span class="number">2</span>.custom/css/custom-theme/jquery-ui-<span class="number">1.10</span>.<span class="number">2</span>.custom.css</span><br><span class="line">https://cdnjs.cloudflare.com/ajax/libs/font-awesome/<span class="number">4.6</span>.<span class="number">3</span>/css/font-awesome.css</span><br></pre></td></tr></table></figure></p>
+<h3 id="Add_logfile"><a href="#Add_logfile" class="headerlink" title="Add logfile"></a>Add logfile</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mkdir spidermanage/lib/</span><br><span class="line">touch spidermanage/lib/__init__.py</span><br></pre></td></tr></table></figure>
+<p>add the following code to spidermanage/lib/logger.py </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># encoding=utf-8</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import logging</span><br><span class="line"></span><br><span class="line">def initLog(logfile, level=<span class="number">2</span>, verbose=False):</span><br><span class="line">    <span class="string">''</span><span class="string">'</span><br><span class="line">    日志记录函数，日志等级默认为2，即INFO级别的日志</span><br><span class="line">    verbose - 是否屏幕输出，默认False</span><br><span class="line">    '</span><span class="string">''</span></span><br><span class="line">    <span class="built_in">log</span>Level = logging.INFO</span><br><span class="line">    <span class="keyword">if</span> level == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">log</span>Level = logging.NOTSET</span><br><span class="line">    <span class="keyword">elif</span> level == <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">log</span>Level = logging.DEBUG</span><br><span class="line">    <span class="keyword">elif</span> level == <span class="number">2</span>:</span><br><span class="line">        <span class="built_in">log</span>Level = logging.INFO</span><br><span class="line">    <span class="keyword">elif</span> level == <span class="number">3</span>:</span><br><span class="line">        <span class="built_in">log</span>Level = logging.WARNING</span><br><span class="line">    <span class="keyword">elif</span> level == <span class="number">4</span>:</span><br><span class="line">        <span class="built_in">log</span>Level = logging.ERROR</span><br><span class="line">    <span class="keyword">elif</span> level == <span class="number">5</span>:</span><br><span class="line">        <span class="built_in">log</span>Level = logging.CRITICAL</span><br><span class="line">    logger = logging.getLogger(<span class="string">'pocdect'</span>)</span><br><span class="line">    console = logging.FileHandler(logfile)</span><br><span class="line">    formatter = logging.Formatter(<span class="string">'[%(asctime)s]%(filename)s-%(process)d-%(thread)d-%(lineno)d-%(levelname)8s-"%(message)s"'</span>,<span class="string">'%Y-%m-%d %a %H:%M:%S'</span>)</span><br><span class="line">    console.setFormatter(formatter)</span><br><span class="line">    logger.addHandler(console)</span><br><span class="line">    logger.setLevel(<span class="built_in">log</span>Level)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> verbose:</span><br><span class="line">        console = logging.StreamHandler()</span><br><span class="line">        console.setLevel(<span class="built_in">log</span>Level)  <span class="comment"># always debug mode to screen</span></span><br><span class="line">        formatter = logging.Formatter(<span class="string">'%(name)-8s: %(levelname)-8s %(message)s'</span>)</span><br><span class="line">        console.setFormatter(formatter)</span><br><span class="line">        logger.addHandler(console)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> logger</span><br></pre></td></tr></table></figure>
+<h3 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python spidermanage/manage.py runserver <span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">80</span> --insecure</span><br></pre></td></tr></table></figure>
+<h2 id="u4F7F_u7528_u65B9_u6CD5"><a href="#u4F7F_u7528_u65B9_u6CD5" class="headerlink" title="使用方法"></a>使用方法</h2><p>  软件不需要用户手动的创建任务便会在后台随机产生任务,并在互联网上抓取,也可以直接创建任务抓取信息.<br>　　暂时先这样，未完待续。。。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/01/21/ToolForSpider简介/">Scan-T简介</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Sherwel 的个人博客">Sherwel</a></p>
+        <p><span>发布时间:</span>2016年01月21日 - 09时25分</p>
+        <p><span>最后更新:</span>2016年09月07日 - 13时12分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/01/21/ToolForSpider简介/" title="Scan-T简介">http://nanshihui.github.io/2016/01/21/ToolForSpider简介/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://nanshihui.github.io/2016/01/21/ToolForSpider简介/　　作者: Sherwel" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/02/25/sqlmaptips/">
+                    sqlmap常用技巧整理
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/01/19/SQL注入总结/">
+                    SQL注入总结（一）
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5173_u4E8EScan-T_u9879_u76EE_u7684_u8BF4_u660E"><span class="toc-number">1.1.</span> <span class="toc-text">关于Scan-T项目的说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B80_u4ECB"><span class="toc-number">2.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6574_u4F53_u67B6_u6784"><span class="toc-number">3.</span> <span class="toc-text">整体架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u9879_u76EE_u5730_u5740"><span class="toc-number">3.1.</span> <span class="toc-text">项目地址</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6548_u679C_u5C55_u793A"><span class="toc-number">4.</span> <span class="toc-text">效果展示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u9996_u9875"><span class="toc-number">4.1.</span> <span class="toc-text">首页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u68C0_u7D22_u7ED3_u679C"><span class="toc-number">4.2.</span> <span class="toc-text">检索结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u540E_u53F0"><span class="toc-number">4.3.</span> <span class="toc-text">后台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u7EDF_u8BA1_u5206_u6790_u9875_u9762"><span class="toc-number">4.4.</span> <span class="toc-text">统计分析页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u4E3B_u673A_u4F4D_u7F6E_u660E_u7EC6_u9875_u9762"><span class="toc-number">4.5.</span> <span class="toc-text">主机位置明细页面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6574_u4F53_u601D_u8DEF"><span class="toc-number">5.</span> <span class="toc-text">整体思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B89_u88C5_u65B9_u6CD5"><span class="toc-number">6.</span> <span class="toc-text">安装方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prepare_the_environment"><span class="toc-number">6.1.</span> <span class="toc-text">Prepare the environment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Get_the_code"><span class="toc-number">6.2.</span> <span class="toc-text">Get the code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install_package"><span class="toc-number">6.3.</span> <span class="toc-text">Install package</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set_the_mysql_config"><span class="toc-number">6.4.</span> <span class="toc-text">Set the mysql config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add_css_file"><span class="toc-number">6.5.</span> <span class="toc-text">Add css file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add_logfile"><span class="toc-number">6.6.</span> <span class="toc-text">Add logfile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Start"><span class="toc-number">6.7.</span> <span class="toc-text">Start</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4F7F_u7528_u65B9_u6CD5"><span class="toc-number">7.</span> <span class="toc-text">使用方法</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/01/21/ToolForSpider简介/" data-title="Scan-T简介" data-url="http://nanshihui.github.io/2016/01/21/ToolForSpider简介/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sherwel"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+
+        ds.src = '//nanshihui.github.io/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+
+    <!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"[object Object]"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+        //ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.src = 'http://nanshihui.github.io/js/embed.js';
+    /*上面是我自己的 embed.js 链接，请改为你自己的地址*/
+
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+-->
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/02/25/sqlmaptips/" title="上一篇: sqlmap常用技巧整理">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/01/19/SQL注入总结/" title="下一篇: SQL注入总结（一）">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/05/run-zmap-in-docker/">Run Zmap in docker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/27/the-spy-in-the-sandbox/">The Spy in the Sandbox :Practical Cache Attacks in JavaScript and their Implications</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/A-Search-Engine-Backed-by-Internet-Wide-Scanning/">A Search Engine Backed by Internet-Wide Scanning</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/10/Program-Adaptive-Mutational-Fuzzing/">Program-Adaptive Mutational Fuzzing</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/18/MySQL主从库相关信息整理/">MySQL主从库相关信息整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/25/sqlmaptips/">sqlmap常用技巧整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/21/ToolForSpider简介/">Scan-T简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/19/SQL注入总结/">SQL注入总结（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/18/python 中常见的 import 模块的方法(总结)/">python 中常见的 import 模块的方法(总结)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/15/网络空间指纹识别/">如何构建一个网络空间指纹识别系统（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/windows-mac-software/">自用 Windows 和 Mac 软件推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/07/hello-world/">hexo编写笔记</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+            var yiliaConfig = {
+            fancybox: true,
+            mathjax: true,
+            animate: true,
+            isHome: false,
+            isPost: true,
+            isArchive: false,
+            isTag: false,
+            isCategory: false,
+            open_in_new: false
+            }
+        </script>
+        
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-right">
+                &copy; 2017 Sherwel
+            </div>
+
+        </div>
+        <div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >本站到访数: 
+                    <span id="busuanzi_value_site_uv"></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+            </span>
+        </div>
+    </div>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</footer>
+
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+<a href="https://github.com/nanshihui"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+<script>
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?bbb0c3446573f18bdbe0fe8060ca72dd":"https://jspassport.ssl.qhimg.com/11.0.1.js?bbb0c3446573f18bdbe0fe8060ca72dd";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+</body>
+</html>
