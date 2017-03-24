@@ -29,7 +29,7 @@ tag:
 　　TOR其实侧重的是匿名性，放在此处仅仅做一个补充了解tor.常见的端口有9050,9001,9040
 #### tor组成
 　　tor包含三个节点，有guard node,relay node ,以及exit node
-![PS-PNG-work](http://nanshihui.github.io/public/tor.jpg)
+![PS-PNG-work](/public/tor.jpg)
 
 #### tor原理流程
 　　tor节点一开始会请求一个consensus文档，以获得tor网络的节点是什么样的。而这个文档是由以下几个IP维护的。其文档的具体内容可以通过如下IP访问,路径为

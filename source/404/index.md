@@ -68,5 +68,5 @@ fancybox: false
 
 <div style="text-align: center">
 以下是博主喜欢的一些歌曲，可以听听，稍作休息~
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=320 height=330 src="http://music.163.com/outchain/player?type=0&id=147897088&auto=0&height=430"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="330"  style="max-width:350px;" src="https://music.163.com/outchain/player?type=0&id=147897088&auto=0&height=430"></iframe>
 </div>

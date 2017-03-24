@@ -30,15 +30,15 @@ tag:
 
 
 ### 首页
-![PS-PNG-main](http://nanshihui.github.io/public/main.png)
+![PS-PNG-main](//nanshihui.github.io/public/main.png)
 ### 检索结果
-![PS-PNG-result](http://nanshihui.github.io/public/result.png)
+![PS-PNG-result](//nanshihui.github.io/public/result.png)
 ### 后台
-![PS-PNG-work](http://nanshihui.github.io/public/work.png)
+![PS-PNG-work](//nanshihui.github.io/public/work.png)
 ### 统计分析页面
-![PS-PNG-analyse](http://nanshihui.github.io/public/analyse.png)
+![PS-PNG-analyse](//nanshihui.github.io/public/analyse.png)
 ### 主机位置明细页面
-![PS-PNG-analyse](http://nanshihui.github.io/public/mapshow.png)
+![PS-PNG-analyse](//nanshihui.github.io/public/mapshow.png)
 <!--### 移动端-->
 <!--<div>-->
 <!--<img src="http://nanshihui.github.io/public/phone.png" width = "268" height = "480" alt="图片名称" align="center" />-->
